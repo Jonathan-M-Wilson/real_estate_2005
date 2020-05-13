@@ -7,6 +7,7 @@ class Room
     @length = length
     @width = width
     @is_painted = false
+    @room_area = area
   end
 
   def area
@@ -20,5 +21,4 @@ class Room
   def paint
     @is_painted = true
   end
-
 end
