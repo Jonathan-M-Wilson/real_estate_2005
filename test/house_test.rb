@@ -9,6 +9,7 @@ class HouseTest < Minitest::Test
     @house = House.new("$400000", "123 sugar lane")
     @room = Room.new(:bedroom, 10, '13')
     @room2 = Room.new(:living_room, 15, '12')
+    @room_3 = Room.new(:living_room, 25, '15')
   end
 
   def test_it_exists
@@ -37,4 +38,12 @@ class HouseTest < Minitest::Test
 
     assert_equal [@room1, @room2], @house.rooms
   end
+
+  #Iteration 3
+
+  def test_it_is_above_market_average
+
+    refute @house.above_market_average?
+  end
+
 end

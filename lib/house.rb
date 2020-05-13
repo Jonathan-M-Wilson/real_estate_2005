@@ -12,4 +12,9 @@ class House
   def add_room(room)
     @rooms << room
   end
+
+  def above_market_average?
+    false unless @price.delete("$").to_i > 500000
+  end
+
 end
